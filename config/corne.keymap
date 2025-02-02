@@ -31,6 +31,5 @@
                      &kp LEFT_CONTROL &kp LEFT_SHIFT    &kp SPACE    &kp ENTER  &mo 4  &tog 3
             >;
         };
-        };
     };
 };
