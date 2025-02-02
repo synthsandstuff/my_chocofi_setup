@@ -23,12 +23,49 @@
 
     keymap {
         compatible = "zmk,keymap";
+
+        basic {
+            bindings = <
+&none  &kp Q        &kp W         &kp E        &kp R          &kp T          &kp Y       &kp U          &kp I        &kp O         &kp P           &none
+&none  &bhm LGUI A  &bhm LCTRL S  &bhm LALT D  &bhm LSHIFT F  &bhm ESC G     &bhm ESC H  &bhm RSHIFT J  &bhm LALT K  &bhm RCTRL L  &bhm RGUI SEMI  &none
+&none  &kp Z        &kp X         &kp C        &kp V          &kp B          &kp N       &kp M          &kp COMMA    &kp DOT       &kp FSLH        &none
+                                  &kp TAB      &kp BSPC       &lt 2 SPACE    &lt 1 RET   &kp SQT        &kp GRAVE
+            >;
+        };
+
+        func {
+            bindings = <
+&none  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6    &kp F7     &kp F8    &kp F9     &kp F10  &none
+&none  &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP        &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &tog 3    &bt BT_CLR &trans    &trans     &kp F12  &none
+                                   &kp CAPS      &kp DEL       &kp SPACE       &kp RET   &trans     &kp RALT
+            >;
+        };
+
+        extra {
+            bindings = <
+&none  &kp EXCL  &kp AT    &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &none
+&none  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5       &kp N6     &kp N7    &kp N8           &kp N9    &kp N0    &none
+&none  &kp PIPE  &kp PLUS  &kp MINUS  &kp EQUAL  &kp UNDER    &kp LBKT   &kp RBKT  &kp BSLH         &kp LBRC  &kp RBRC  &none
+                           &trans     &trans     &trans       &trans     &trans    &trans
+            >;
+        };
+
         game {
             bindings = <
 &none  &kp Q  &kp W  &kp E            &kp R             &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &none
 &none  &kp A  &kp S  &kp D            &kp F             &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &none
 &none  &kp Z  &kp X  &kp C            &kp V             &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
                      &kp LEFT_CONTROL &kp LEFT_SHIFT    &kp SPACE    &kp ENTER  &mo 4  &tog 3
+            >;
+        };
+
+        nums {
+            bindings = <
+&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &none
+&none  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
+                       &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
